@@ -6,7 +6,7 @@ yeastj is simple library for convert byte stream to message object
     
     예를들어 TCP/IP 프로그래밍을 할때 우리는 프로토콜(message format)을 정의 합니다.  
     client가 메시지를 보내면 서버는 byte stream을 읽습니다. 그리고 정의된 프로토콜로 파싱합니다.
-    이때 YeastJ를 사용하면 간단하게 정의된 format의 Message Object를 얻을수 있습니다.
+    이때 YeastJ를 사용하면 간단히 정의된 format의 Message Object를 얻을수 있습니다.
    
  # 사용 방법 
     
@@ -18,9 +18,9 @@ yeastj is simple library for convert byte stream to message object
        
        Chat_Login_Req {
           length:%4d,
-          id:%4d,
+          id:%20s,
           pwd:%20s,
-          filler:%22s
+          filler:%6s
         }
         
         정의된 format은 4개의 필더로 구성된 메시지 입니다. length는 4byte의 '0050' 형태의 값입니다.
@@ -30,7 +30,7 @@ yeastj is simple library for convert byte stream to message object
    - YeastJ 사용  
       주요 component 설명  
         MessageFormatParser: format 정보를 입력받아서 MessageFormat 객체를 생성합니다.  
-        MessageFormat: format 정보를 tree 자료 구조로 가집니다.  
+        MessageFormat: format 정보를 tree 자료 구조로 표현합니다. 
         Message: 메시지는 format을 가지며, 정보를 get, set 할 수 있습니다.  
         MessageEncoder: Message to byte stream  
         MessageDecoder: byte stream to Message  
@@ -56,6 +56,8 @@ yeastj is simple library for convert byte stream to message object
           // 메시지를 바이트 스트림으로 엔코딩 한다.
           MessageEncoder encoder = new MessageEncoder();
           byte[] result = encoder.encode(message);
+	  
+	  // 결과[0050kms                 1234!!                    ]   
           
           // 바이트 스트림을 메시지로 디코딩 한다.
           MessageDecoder decoder = new MessageDecoder(format);
