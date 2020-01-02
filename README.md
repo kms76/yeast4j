@@ -57,8 +57,6 @@ yeastj is simple library for convert byte stream to message object
           MessageEncoder encoder = new MessageEncoder();
           byte[] result = encoder.encode(message);
 
-	// 결과[0050kms                 1234!!                    ]
-          
           // 바이트 스트림을 메시지로 디코딩 한다.
           MessageDecoder decoder = new MessageDecoder(format);
           Message msg = decoder.decode(result);
