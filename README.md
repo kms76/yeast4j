@@ -6,7 +6,7 @@ yeastj is simple library for convert byte stream to message object
     
     예를들어 TCP/IP 프로그래밍을 할때 우리는 프로토콜(message format)을 정의 합니다.  
     client가 메시지를 보내면 서버는 byte stream을 읽습니다. 그리고 정의된 프로토콜로 파싱합니다.
-    이때 YeastJ를 사용하면 정의된 format으로 메시지를 파싱하여 Message라는 객체로 돌려 줍니다. 
+    이때 YeastJ를 사용하면 간단하게 정의된 format의 Message Object를 얻을수 있습니다.
    
  # 사용 방법 
     
