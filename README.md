@@ -27,7 +27,7 @@ yeast4j is simple library for convert byte stream to message object
         필더 정의 형식은 java의 String format과 유사합니다.
         '%' 다음의 숫자는 필더 길이를 뜻하고 'd'는 정수를 뜻합니다. 's'는 string을 표현합니다.
         
-   - YeastJ 사용  
+   - Yeast4J 사용  
       주요 component 설명  
         MessageFormatParser: format 정보를 입력받아서 MessageFormat 객체를 생성합니다.  
         MessageFormat: format 정보를 tree 자료 구조로 표현합니다. 
