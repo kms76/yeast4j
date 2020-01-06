@@ -1,8 +1,8 @@
-# yeastj
-yeastj is simple library for convert byte stream to message object
+# yeast4j
+yeast4j is simple library for convert byte stream to message object
 
 # 소개  
-    YeastJ는 바이트 스트림을 사용자가 정의한 format정보에 맞게 엔코딩/디코딩을 하여 Message Object로 변환합니다.  
+    Yeast4J는 바이트 스트림을 사용자가 정의한 format정보에 맞게 엔코딩/디코딩을 하여 Message Object로 변환합니다.  
     
     예를들어 TCP/IP 프로그래밍을 할때 우리는 프로토콜(message format)을 정의 합니다.  
     client가 메시지를 보내면 서버는 byte stream을 읽습니다. 그리고 정의된 프로토콜로 파싱합니다.
@@ -11,7 +11,7 @@ yeastj is simple library for convert byte stream to message object
  # 사용 방법 
     
     - format 정의 하기 
-        YeastJ를 사용하기 위해서는 먼저 format 정의가 필요합니다.
+        Yeast4J를 사용하기 위해서는 먼저 format 정의가 필요합니다.
         텍스트 파일을 열고 아래와 같이 작성후 확장자를 '.fmt'로 저장 하세요.
         
        Chat_Login_Req.fmt 파일 내용
