@@ -1,0 +1,10 @@
+Amazon_BookList_Res {
+	keyword: %50s,
+	bookCount1: %3d,
+	books[5] {
+		title: %50s,
+		author: %20s,
+		price: %8d
+	}
+	filler: %10s
+}

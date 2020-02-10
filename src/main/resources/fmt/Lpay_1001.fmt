@@ -1,0 +1,14 @@
+Lpay_1001 {
+	Header {
+		teleLen:%4d,
+		teleType:%4d(comment=전문구분코드),
+		tranType:%4d(comment=거래구분코드),
+		traceNo:%10d(default=0000000001, comment=전문추적번호)
+	},
+	Body {
+		authNo:%10d(comment=인증번호),
+		posType:%4d(comment=포스타입),
+		posCode:%4d(comment=포스코드),
+		aaa:%-10s
+	}
+}
