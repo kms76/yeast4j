@@ -61,6 +61,7 @@ yeast4j is simple library for convert byte stream to message object
           // 바이트 스트림을 메시지로 디코딩 한다.
           MessageDecoder decoder = new MessageDecoder(format);
           Message msg = decoder.decode(result);
+	  
 	  System.out.println("length="+msg.getAsInt("length"));
 	  System.out.println("id="+msg.getAsString("id"));
 	  System.out.println("pwd="+msg.getAsString("pwd"));
